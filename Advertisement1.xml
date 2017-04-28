@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Advertisement-File-1.2"
+                    >
+  <Ad>
+    <ImageUrl>images\nokialogo.gif</ImageUrl>
+    <NavigateUrl>http://www.nokia.com</NavigateUrl>
+    <AlternateText>Visit Nokia Today!</AlternateText>
+    <Impressions>50</Impressions>
+    <!--<Keyword>VB.NET</Keyword>-->
+  </Ad>
+  <Ad>
+    <ImageUrl>images\rail.jpg</ImageUrl>
+    <NavigateUrl>http://www.indianrail.gov.in</NavigateUrl>
+    <AlternateText>Visit Indian Railway Today!</AlternateText>
+    <Impressions>50</Impressions>
+    <!--<Keyword>XML</Keyword>-->
+  </Ad>
+  <Ad>
+    <ImageUrl>images\snacker_spoiler.png</ImageUrl>
+    <NavigateUrl>http://www.kfc.com</NavigateUrl>
+    <AlternateText>Visit KFC Today!</AlternateText>
+    <Impressions>50</Impressions>
+    <!--<Keyword>XML</Keyword>-->
+  </Ad>
+</Advertisements>

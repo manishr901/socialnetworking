@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+<%@ Register assembly="MangoChat" namespace="ASPNETChatControl" tagprefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/faary.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <script type="text/javascript" src="js/jquery.js"></script>
+    <style type="text/css">
+       .bt
+        {
+	    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        background: -moz-linear-gradient(center top , #FFFFFF, #EEEEEE 2px, #FFFFFF 25px) repeat scroll 0 0 transparent;
+        border: 1px solid #6E9E28;
+        color: #5B851E;
+        height: 18px;
+        margin: 0;
+        padding: 5px;
+        width: 264px;
+    	}
+
+        
+        .style1
+        {
+            width: 100%;
+        }
+
+        
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="main-wapper" style="width:90%">
+             <div class="iform" style="margin-top:5px;width:100%; ">
+             <asp:ScriptManager ID="ScriptManager1" runat="server">
+                     </asp:ScriptManager>
+                     <table class="style1">
+                          <tr>
+                              <td style="font-family: 'Californian FB'; font-size: xx-large; color: #FFFFFF; font-weight: bold">
+                                  Friends' Corner</td>
+                              <td align="center">
+                              
+                           <table align="center">
+                          <tr>
+                            <td align="left" style="color: #FFFFFF" colspan="6">Search Friends
+                                <asp:TextBox ID="TextBox2" runat="server" CssClass="itext"></asp:TextBox>
+                            </td>
+                        </tr>   
+                     <tr>
+                     <td> 
+                         <asp:Button ID="Button1" runat="server" Text="Home" onclick="Button1_Click1" Font-Bold="False" 
+                        CssClass="ibutton" Width="90px" /></td>
+                     <td><asp:Button ID="Button2" runat="server" Text="Profile" 
+                         PostBackUrl="~/Profile1.aspx" Font-Bold="False"   CssClass="ibutton" 
+                              Width="90px" /></td>
+                     <td><asp:Button ID="Button3" runat="server" Text="Photos" 
+                         PostBackUrl="~/Photos1.aspx" Font-Bold="False" CssClass="ibutton" 
+                             Width="90px" /> </td>
+                      </tr>
+                       </table>
+                  
+                                  </td>
+                                  <td>
+                                     <asp:Label ID="lbl2" runat="server" ForeColor="White"/>&nbsp; <asp:LinkButton ID="LnkLogout" runat="server" Font-Underline="True" 
+                                          ForeColor="White" onclick="LnkLogout_Click">Logout</asp:LinkButton>
+                                  </td>
+                              </tr>
+                          </table>     
+              </div>
+              <div style="float:left;width:200px;margin-left:5px; border-right-style: solid; border-right-width: 1px; border-right-color: #6E9E28;" 
+            align="center">
+            <table width="199px">
+                <tr>
+                <td>
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="166px" Width="198px" 
+                     ImageUrl="~/question_mark.jpg" />
+                </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                                         <asp:Label ID="Label3" runat="server" BorderColor="#990099" Font-Bold="True" 
+                                             ForeColor="#660033" Text="FRIENDS"></asp:Label>
+                    
+                    </td>
+                 </tr> 
+                 <tr>
+                             <td align="center">
+                                 <asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSource1" 
+                                     onitemcommand="ListView1_ItemCommand">
+                                     <ItemTemplate>
+                                         <table>
+                                             <tr>
+                                                 <td>
+                                                     <asp:Image ID="Image2" runat="server" BorderColor="Pink" BorderWidth="2" 
+                                                         Height="40" ImageUrl='<%# Eval("FromFriendPhoto") %>' Width="40" />
+                                                 </td>
+                                                 <td>
+                                                     <asp:LinkButton ID="LinkButton1" runat="server" 
+                                                         CommandArgument='<%# Eval(" FromFriendEmailId") %>'>
+                                                     <%# Eval("FromFriendName") %>
+                                                     </asp:LinkButton>
+                                                 </td>
+                                             </tr>
+                                         </table>
+                                     </ItemTemplate>  
+                      <LayoutTemplate>
+                                         <table>
+                                             <tr ID="itemplaceholder" runat="server">
+                                             </tr>
+                                         </table>
+                                     </LayoutTemplate>
+                                 </asp:ListView>
+                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                     SelectCommand="SELECT FromFriendName, FromFriendEmailId, FromFriendPhoto FROM Friend_List WHERE (ToFriendEmailId LIKE @ToFriendEmailId) UNION SELECT ToFriendName, ToFriendEmailId, ToFriendPhoto FROM Friend_List AS Friend_List_1 WHERE (FromFriendEmailId LIKE @FromFriendEmailId)">
+                                     <SelectParameters>
+                                         <asp:SessionParameter Name="ToFriendEmailId" SessionField="email" 
+                                             Type="String" />
+                                         <asp:SessionParameter Name="FromFriendEmailId" SessionField="email" />
+                                     </SelectParameters>
+                                 </asp:SqlDataSource>
+                     
+              
+                                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                     SelectCommand="SELECT FromFriendName, FromFriendEmailId, FromFriendPhoto FROM Friend_List WHERE (ToFriendEmailId LIKE @ToFriendEmailId) UNION SELECT ToFriendName, ToFriendEmailId, ToFriendPhoto FROM Friend_List AS Friend_List_1 WHERE (FromFriendEmailId LIKE @FromFriendEmailId)">
+                                     <SelectParameters>
+                                         <asp:SessionParameter Name="ToFriendEmailId" SessionField="email" 
+                                             Type="String" />
+                                         <asp:SessionParameter Name="FromFriendEmailId" SessionField="email" />
+                                     </SelectParameters>
+                                 </asp:SqlDataSource>
+                             </td>
+                         </tr>
+            </table>
+            </div>
+            <div style="float:right;width:230px;height:100%;">
+        <br />
+                <asp:AdRotator ID="AdRotator1" runat="server" 
+                    AdvertisementFile="~/Advertisement4.xml" Height="200px" Width="99%" />
+                <asp:AdRotator ID="AdRotator2" runat="server" 
+                    AdvertisementFile="~/Advertisement5.xml" Height="200px" Width="99%" />
+                <asp:AdRotator ID="AdRotator3" runat="server" 
+                    AdvertisementFile="~/Advertisement6.xml" Height="200px" Width="99%" />
+       </div>
+        
+                                         <cc1:chatcontrol ID="ChatControl1" runat="server">
+                                         </cc1:chatcontrol>
+                                    
+        
+       <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+    
+   </div>                
+</form>
+</body>
+</html>

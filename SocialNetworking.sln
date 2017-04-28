@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SocialNetworking", "..\..\WebSites\SocialNetworking\", "{EE41D6B0-B810-44DB-8849-7FBF9A5334D4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/SocialNetworking"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\SocialNetworking\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SocialNetworking\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SocialNetworking"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\SocialNetworking\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SocialNetworking\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50116"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SocialNetworkingUpgraded", ".", "{37ACEA0A-514C-4F2E-944C-1FE1F283C532}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/SocialNetworkingUpgraded"
+		Debug.AspNetCompiler.PhysicalPath = "..\SocialNetworkingUpgraded\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SocialNetworkingUpgraded\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SocialNetworkingUpgraded"
+		Release.AspNetCompiler.PhysicalPath = "..\SocialNetworkingUpgraded\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SocialNetworkingUpgraded\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "19220"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE41D6B0-B810-44DB-8849-7FBF9A5334D4}.Debug|.NET.ActiveCfg = Debug|.NET
+		{EE41D6B0-B810-44DB-8849-7FBF9A5334D4}.Debug|.NET.Build.0 = Debug|.NET
+		{EE41D6B0-B810-44DB-8849-7FBF9A5334D4}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{37ACEA0A-514C-4F2E-944C-1FE1F283C532}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{37ACEA0A-514C-4F2E-944C-1FE1F283C532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37ACEA0A-514C-4F2E-944C-1FE1F283C532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

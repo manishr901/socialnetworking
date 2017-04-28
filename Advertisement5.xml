@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements
+xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Advertisement-File-1.2">
+  <Ad>
+    <ImageUrl>images\airtel.png</ImageUrl>
+    <NavigateUrl>http://www.airtel.in</NavigateUrl>
+    <AlternateText>Visit Airtel Today!</AlternateText>
+    <Impressions>50</Impressions>
+    <!--<Keyword>VB.NET</Keyword>-->
+  </Ad>
+  <Ad>
+    <ImageUrl>images\big.jpg</ImageUrl>
+    <NavigateUrl>http://bigbazaronline.com</NavigateUrl>
+    <AlternateText>Visit Big Bazar Today!</AlternateText>
+    <Impressions>50</Impressions>
+    <!--<Keyword>XML</Keyword>-->
+  </Ad>
+</Advertisements>

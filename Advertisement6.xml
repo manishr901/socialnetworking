@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements
+xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Advertisement-File-1.2">
+  <Ad>
+    <ImageUrl>images\south.jpg</ImageUrl>
+    <NavigateUrl>http://southcitymall.in/</NavigateUrl>
+    <AlternateText>Visit SouthCityMall Today!</AlternateText>
+    <Impressions>50</Impressions>
+    <!--<Keyword>VB.NET</Keyword>-->
+  </Ad>
+  <Ad>
+    <ImageUrl>images\ibm.jpg</ImageUrl>
+    <NavigateUrl>http://www.ibm.com</NavigateUrl>
+    <AlternateText>Visit IBM Today!</AlternateText>
+    <Impressions>50</Impressions>
+    <!--<Keyword>XML</Keyword>-->
+  </Ad>
+</Advertisements>
